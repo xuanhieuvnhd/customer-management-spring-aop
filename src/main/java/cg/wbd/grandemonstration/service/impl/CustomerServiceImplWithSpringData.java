@@ -22,7 +22,8 @@ public class CustomerServiceImplWithSpringData implements CustomerService {
     }
 
     @Override
-    public Page<Customer> findAll(Pageable pageInfo) {
+    public Page<Customer> findAll(Pageable pageInfo) throws Exception {
+        if (true) throw new Exception("a dummy exception");
         return customerRepository.findAll(pageInfo);
     }
 
